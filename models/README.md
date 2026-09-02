@@ -22,8 +22,6 @@ print(bundle["best_params"])
 print(bundle["validation"])
 ```
 
-Tree models require the stored 34-column feature contract. The PatchTST bundle contains a fitted `NeuralForecast` object. See the project forecasting notebooks and production script for complete preprocessing and inference examples.
+Tree models require the stored 34-column features. The PatchTST bundle contains a fitted `NeuralForecast` object.
 
 Install the corresponding libraries before loading (`lightgbm`, `xgboost`, `catboost`, or `neuralforecast`/`torch`). On macOS, LightGBM and XGBoost also require an OpenMP runtime such as `libomp`.
-
-> Only load joblib files from trusted sources; deserialization can execute arbitrary code.
