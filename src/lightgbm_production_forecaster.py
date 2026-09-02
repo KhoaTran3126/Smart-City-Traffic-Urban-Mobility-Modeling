@@ -14,10 +14,6 @@ python 04_lightgbm_production_forecaster.py \
 Required runtime packages
 -------------------------
 pandas, numpy, joblib, lightgbm, scikit-learn
-
-On macOS, LightGBM also needs libomp (`brew install libomp`). If PyTorch or
-scikit-learn already bundles libomp, this script can re-launch itself with that
-library path before loading the model.
 """
 
 from __future__ import annotations
@@ -76,9 +72,9 @@ def ensure_macos_openmp() -> None:
 
 ensure_macos_openmp()
 
-import joblib  # noqa: E402  (imports intentionally follow OpenMP preparation)
-import numpy as np  # noqa: E402
-import pandas as pd  # noqa: E402
+import joblib  
+import numpy as np  
+import pandas as pd  
 
 
 def log_event(event: str, **fields: Any) -> None:
@@ -373,8 +369,7 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    try:
-        raise SystemExit(main())
+    try: raise SystemExit(main())
     except Exception as exc:
         logging.basicConfig(level=logging.ERROR, format="%(message)s")
         log_event("forecast_failed", error_type=type(exc).__name__, error=str(exc))
