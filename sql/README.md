@@ -12,4 +12,4 @@ This directory contains the SQL analyses for the **Smart City Traffic & Urban Mo
 | `04_traffic_signal.sql` | Traffic signal timing, efficiency, and intersection performance |
 | `05_environment.sql` | CO₂ emissions, idling, and environmental impacts of traffic conditions |
 
-The analyses use techniques including **CTEs, window functions, conditional aggregation, ranking, rolling statistics, and temporal comparisons** to derive insights from the city's spatiotemporal traffic data.
+The analyses use techniques including **CTEs, joins, window functions, conditional aggregation, ranking, rolling statistics, and temporal comparisons** to derive insights from the city's spatiotemporal traffic data.
