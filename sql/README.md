@@ -6,7 +6,7 @@ This directory contains the SQL analyses for the **Smart City Traffic & Urban Mo
 
 | File | Analysis |
 |---|---|
-| `01_traffic_flow_demand.sql` | Traffic volume, demand patterns, peak periods, and temporal trends |
+| `01_traffic_flow_demand.sql` | Traffic volume & demand patterns |
 | `02_congestion.sql` | Congestion severity, bottlenecks, incidents, and spatial/intersection patterns |
 | `03_weather.sql` | Effects of weather conditions on traffic flow and congestion |
 | `04_traffic_signal.sql` | Traffic signal timing, efficiency, and intersection performance |
